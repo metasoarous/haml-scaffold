@@ -1,0 +1,16 @@
+require File.dirname(__FILE__) + '/../spec_helper'
+include ApplicationHelper
+include <%= controller_class_name %>Helper
+
+
+describe <%= controller_class_name %>Helper do
+	before do
+	  # stuff
+	end
+	
+	describe "feature or characteristic" do
+	  it "does stuff" do
+	    # should_do_stuff
+    end 
+  end
+end

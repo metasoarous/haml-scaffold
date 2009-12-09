@@ -46,9 +46,9 @@ class HamlScaffoldGenerator < Rails::Generator::NamedBase
       m.directory(File.join('app/controllers', controller_class_path))
       m.directory(File.join('app/helpers', controller_class_path))
       m.directory(File.join('app/views', controller_class_path, controller_file_name))
-      m.directory(File.join('test/functional', controller_class_path))
-      m.directory(File.join('test/unit', class_path))
-      m.directory(File.join('test/unit/helpers', class_path))
+
+      m.directory(File.join('spec/helpers', class_path))
+      m.directory(File.join('spec/models', class_path))
 
       for action in scaffold_views
         m.template("view_#{action}.html.haml.erb", File.join('app/views', controller_class_path, controller_file_name, "#{action}.html.haml"))
@@ -57,9 +57,9 @@ class HamlScaffoldGenerator < Rails::Generator::NamedBase
       m.template("_form.html.haml.erb", File.join('app/views', controller_class_path, controller_file_name, "_form.html.haml"))
       m.template("_object.html.haml.erb", File.join('app/views', controller_class_path, controller_file_name, "_#{name}.html.haml"))
       m.template('controller.rb.erb', File.join('app/controllers', controller_class_path, "#{controller_file_name}_controller.rb"))
-      m.template('functional_test.rb.erb', File.join('test/functional', controller_class_path, "#{controller_file_name}_controller_test.rb"))
-      m.template('helper.rb.erb',          File.join('app/helpers',     controller_class_path, "#{controller_file_name}_helper.rb"))
-      m.template('helper_test.rb.erb',     File.join('test/unit/helpers',    controller_class_path, "#{controller_file_name}_helper_test.rb"))
+      m.template('helper.rb.erb', File.join('app/helpers', controller_class_path, "#{controller_file_name}_helper.rb"))
+      m.template('helper_spec.rb.erb', File.join('spec/helpers', controller_class_path, "#{controller_file_name}_helper_spec.rb"))
+      m.template('model_spec.rb.erb', File.join('spec/models', controller_class_path, "#{controller_file_name}_spec.rb"))
       m.directory('app/views/layouts')
       m.directory('public/stylesheets/sass')
       m.template('layout.html.haml.erb', 'app/views/layouts/application.html.haml', :collision => :skip, :assigns => {:application_name => @application_name})
