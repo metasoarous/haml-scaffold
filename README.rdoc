@@ -74,9 +74,11 @@ Also, don't forget to Hamlize your Rails app:
 * Haml[http://haml.hamptoncatlin.com/]
 * {RSpec Haml scaffold generator}[http://github.com/dfischer/rspec-haml-scaffold-generator]
 
-== Author
+== Authors
 
-{Norman Clarke}[mailto:norman@njclarke.com]
+
+Mostly {Norman Clarke}[mailto:norman@njclarke.com]
+Modded by Chris Small
 
 This work is derived from code in {Ruby on Rails}[http://rubyonrails.org/] and
 is released under its same license, the MIT License.

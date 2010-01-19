@@ -2,11 +2,11 @@ require 'newgem'
 require File.dirname(__FILE__) + "/lib/haml_scaffold/version"
 $hoe = Hoe.new("haml_scaffold", HamlScaffold::Version::STRING) do |p|
   p.rubyforge_name = "haml-scaffold"
-  p.author = ['Norman Clarke']
+  p.author = ['Chris Small']
   p.email = ['norman@njclarke.com']
-  p.summary = "Rails scaffolding with Haml rather than ERB"
+  p.summary = "Rails scaffolding with Haml rather than ERB - modded from Norman Clarke's plugin for my preferences"
   p.description = "Rails scaffolding with Haml rather than ERB, and various other improvements."
-  p.url = 'http://haml-scaffold.rubyforge.org/'
+  p.url = ''
   p.extra_deps << ['haml', '>= 2.0.6']
   p.extra_deps << ['will_paginate', '>= 2.2.2']
   p.extra_deps << ['mocha', '>= 0.9.0']
